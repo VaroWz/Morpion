@@ -20,6 +20,8 @@ func main() {
 			board()
 			fmt.Println("Fin de la partie")
 			return
+		} else {
+			automaticPlay()
 		}
 	}
 
