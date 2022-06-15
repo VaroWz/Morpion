@@ -4,32 +4,30 @@ import (
 	"fmt"
 )
 
+var one = []string{"1", "2", "3", "4", "5", "6", "7", "8", "9"}
+var choose int
+
 func main() {
 
-	checkWin.isWin = false
-	for checkWin.compteur := 0; checkWin.compteur < 100; checkWin.compteur++ {
+	for compteur := 0; compteur < 100; compteur++ {
 
-		if checkWin.isWin == false {
-			fmt.Println("Placez votre pion à la case: ")
-			board()
-			fmt.Scan(&choose.checkWin)
-			checkWin.choose = checkWin.choose - 1
-			checkWin.one[checkWin.choose] = "X"
-			checkWin()
-		}
-		if checkWin.isWin == true {
+		fmt.Println("Placez votre pion à la case: ")
+		board()
+		fmt.Scan(&choose)
+		choose = choose - 1
+		one[choose] = "X"
+		if checkWin() == true {
 			board()
 			fmt.Println("Fin de la partie")
 			return
 		}
-
 	}
 
 }
 func board() {
 
-	fmt.Println(checkWin.one[0], "|", checkWin.one[1], "|", checkWin.one[2])
-	fmt.Println(checkWin.one[3], "|", checkWin.one[4], "|", checkWin.one[5])
-	fmt.Println(checkWin.one[6], "|", checkWin.one[7], "|", checkWin.one[8])
+	fmt.Println(one[0], "|", one[1], "|", one[2])
+	fmt.Println(one[3], "|", one[4], "|", one[5])
+	fmt.Println(one[6], "|", one[7], "|", one[8])
 
 }
