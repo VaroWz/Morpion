@@ -15,13 +15,18 @@ func main() {
 		board()
 		fmt.Scan(&choose)
 		choose = choose - 1
-		one[choose] = "X"
-		if checkWin() == true {
-			board()
-			fmt.Println("Fin de la partie")
-			return
-		} else {
-			automaticPlay()
+		if one[choose] == "X" || one[choose] == "O"{
+			fmt.Println("Vous ne pouvez pas jouer ici !")
+		} else{
+
+			one[choose] = "X"
+			if checkWin() == true {
+				board()
+				fmt.Println("Fin de la partie")
+				return
+			} else {
+				automaticPlay()
+			}
 		}
 	}
 
