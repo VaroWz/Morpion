@@ -15,9 +15,9 @@ func main() {
 		board()
 		fmt.Scan(&choose)
 		choose = choose - 1
-		if one[choose] == "X" || one[choose] == "O"{
+		if one[choose] == "X" || one[choose] == "O" {
 			fmt.Println("Vous ne pouvez pas jouer ici !")
-		} else{
+		} else {
 
 			one[choose] = "X"
 			if checkWin() == true {
